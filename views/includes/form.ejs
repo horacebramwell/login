@@ -1,0 +1,163 @@
+<!-- Registration form -->
+<div id="registration-form-wrapper">
+  <form id="registration-form" action="register" method="POST">
+    <!-- Name -->
+    <div class="registration-form__fullname">
+      <input type="text" id="firstname" name="firstname" placeholder="Firstname" />
+      <input type="text" name="lastname" placeholder="Lastname" />
+    </div>
+    <div class="registration-form__address">
+      <input type="text" name="address" placeholder="Address" />
+    </div>
+    <!-- City - State - Zip -->
+    <div class="registration-form__city-state-zip">
+      <input type="text" name="city" placeholder="City" />
+      <input type="text" name="state" placeholder="State" />
+      <input type="text" name="zip" placeholder="Zip" />
+    </div>
+    <!-- Age -->
+    <div class="registration-form__age-gender">
+      <select name="age">
+        <option value="age" selected="true" disabled="disabled">Age</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        <option value="32">32</option>
+        <option value="33">33</option>
+        <option value="34">34</option>
+        <option value="35">35</option>
+        <option value="36">36</option>
+        <option value="37">37</option>
+      </select>
+      <!-- Gender -->
+      <div class="gender">
+        <label>
+          <input type="radio" name="gender" value="male" />
+          Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="female" />
+          Female
+        </label>
+      </div>
+    </div>
+    <!-- Bio -->
+    <div class="registration-form__bio">
+      <textarea name="bio" cols="30" rows="10"></textarea>
+    </div>
+    <!-- Consent -->
+    <div class="registration-form__consent">
+      <input type="checkbox" name="consent" value="yes" />
+      I agree to the <a href="#">terms and conditions</a> of this site. I am at least 18 years old.
+    </div>
+
+    <!-- Submit -->
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<!-- Styles -->
+<style>
+  /* Wrapper */
+  #registration-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Registration Form */
+  #registration-form {
+    width: 100%;
+    max-width: 700px;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
+
+  /* Divs */
+  #registration-form div:not(.registration-form__consent) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  /* inputs */
+  #registration-form input {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  /* selects */
+  #registration-form select {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  /* radios - age / gender */
+  #registration-form input[type='radio'] {
+    height: 2em;
+    width: 2rem;
+  }
+
+  .registration-form__age-gender {
+    column-gap: 3rem !important;
+  }
+
+  /* label */
+  #registration-form label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    column-gap: 1rem;
+  }
+
+  /* textareas */
+  #registration-form textarea {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  /* checkboxes */
+  #registration-form input[type='checkbox'] {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  /* buttons */
+  #registration-form button {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+</style>

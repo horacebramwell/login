@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="/">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                <% if(pagename == 'index') { %>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: #29587A" href="/">Home</a></li>
+                <% } else { %>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: white" href="/">Home</a></li>
+                <% } %>
+                <% if(pagename == "about") {%>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: #29587A" href="about">About</a></li>
+                <%} else {%>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: white" href="about">About</a></li>
+                <%} %> 
+                <% if(pagename == "post") {%>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: #29587A" href="post">Sample Post</a></li>
+                <%} else {%>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: white" href="post">Sample Post</a></li>
+                <%} %>
+                <% if(pagename == "contact") {%>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: #29587A" href="contact">Contact</a></li>
+                <%} else {%>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: white" href="contact">Contact</a></li>
+                <%} %>
+
+
+                <% if(typeof(sess) != "undefined" && sess.loggedin == true) { %>
+                    <% if(pagename == "profile") {%>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: #29587A" href="profile">Profile</a></li>
+                    <%} else {%>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: white" href="profile">Profile</a></li>
+                    <%} %>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color: white" href="logout">Logout</a></li>
+                <% } %> 
+            </ul>
+        </div>
+
+        <div style="
+            z-index: 12;
+            display: block;
+            text-align: center;
+            background: #333a40;
+            margin-right: 0rem;
+            color: grey;
+            position: absolute;
+            width: 16rem;
+            margin-top: 3.5rem;
+            padding-top: 5rem;
+            right: 1rem;
+            border-radius: .75rem;
+            font-size: 1rem;
+        ">
+
+        <form action="login" method="POST">
+            <input type="email" name="email" placeholder="email">
+            <input type="password" name="password" placeholder="password">
+            <div style="padding: 1rem; display: flex; justify-content: center; align-items: center;">
+                <button
+                    style="
+                        background: #29587A;
+                        color: white;
+                        border: 2px solid #29587A;
+                        border-radius: .75rem;
+                        padding: .75rem 1.25rem;
+                        font-size: 1rem;
+                        cursor: pointer;
+                    "
+                    type="submit"
+                type="submit">Login</button>
+                <a style="
+                    color: white;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    padding: .75rem 1.25rem;
+                    border-radius: .75rem;
+                    border: 2px solid #29587A;
+                    margin-left: .5rem;
+                    " href="/register">Register</a>
+            </div>
+        </form>
+        </div>
+
+
+
+    </div>
+</nav>
